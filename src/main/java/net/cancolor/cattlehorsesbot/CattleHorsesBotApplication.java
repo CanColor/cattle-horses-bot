@@ -3,6 +3,7 @@ package net.cancolor.cattlehorsesbot;
 import io.netty.channel.Channel;
 import net.cancolor.easymiraiapi.channel.WebSocketMessageChannel;
 import net.cancolor.easymiraiapi.constent.ChannelConstant;
+import net.cancolor.easymiraiapi.constent.PokeConstant;
 import net.cancolor.easymiraiapi.factory.MessageChannelFactory;
 import net.cancolor.easymiraiapi.init.ImClientInit;
 import org.slf4j.Logger;
@@ -47,18 +48,19 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
 //                messageChannel.builder(channel, botId, 166748580L,575604615L).addAt().addPlainText("1")
 //                        .addFace(1).addFace(2).send();
 
-//                messageChannel.builder(channel, botId, 166748580L,575604615L).addPokeMessage(PokeConstant.CHUO_YI_CHUO).send();
+                messageChannel.builder(channel, botId, 575604615L).addPokeMessage(PokeConstant.BI_XIN).send();
                 //戳一戳
 //               messageChannel.builder(channel, botId, 166748580L,575604615L).nudge();
 //                messageChannel.builder(channel, botId, 575604615L).nudge();
                 //禁言
 
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).mute(2);
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).mute(2);
+//
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).unmute();
+//
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).kick("给爷爪巴", false);
 
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).unmute();
-
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).kick("给爷爪巴", false);
-
+//                messageChannel.builder(channel,botId,575604615L).addVipFace(VipFace.LiuLian).send();
 
             } catch (Exception e) {
                 e.printStackTrace();
