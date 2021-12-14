@@ -34,7 +34,7 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
     }
 
     public class clientThread implements Runnable {
-        private Logger logger = LoggerFactory.getLogger(this.toString());
+        private final Logger logger = LoggerFactory.getLogger(this.toString());
         private Channel channel;
 
         @Override
@@ -44,7 +44,21 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
             try {
                 WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
                 //私聊
-                messageChannel.builder(channel, botId, 166748580L,575604615L).addAt().send();
+//                messageChannel.builder(channel, botId, 166748580L,575604615L).addAt().addPlainText("1")
+//                        .addFace(1).addFace(2).send();
+
+//                messageChannel.builder(channel, botId, 166748580L,575604615L).addPokeMessage(PokeConstant.CHUO_YI_CHUO).send();
+                //戳一戳
+//               messageChannel.builder(channel, botId, 166748580L,575604615L).nudge();
+//                messageChannel.builder(channel, botId, 575604615L).nudge();
+                //禁言
+
+                messageChannel.builder(channel, botId, 166748580L, 3021611449L).mute(2);
+
+                messageChannel.builder(channel, botId, 166748580L, 3021611449L).unmute();
+
+                messageChannel.builder(channel, botId, 166748580L, 3021611449L).kick("给爷爪巴", false);
+
 
             } catch (Exception e) {
                 e.printStackTrace();
