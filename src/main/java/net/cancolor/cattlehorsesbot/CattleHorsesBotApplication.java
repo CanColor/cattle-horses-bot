@@ -1,11 +1,7 @@
 package net.cancolor.cattlehorsesbot;
 
 import io.netty.channel.Channel;
-import net.cancolor.easymiraiapi.channel.WebSocketMessageChannel;
-import net.cancolor.easymiraiapi.constant.ChannelConstant;
-import net.cancolor.easymiraiapi.factory.MessageChannelFactory;
 import net.cancolor.easymiraiapi.init.ImClientInit;
-import net.cancolor.easymiraiapi.model.message.UrlMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -43,7 +39,7 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
             imClientInit.connection();
             this.channel = imClientInit.getchannel();
             try {
-                WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
+//                WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
                 //私聊
 //                messageChannel.builder(channel, botId, 166748580L,575604615L).addAt().addPlainText("1")
 //                        .addFace(1).addFace(2).send();
@@ -75,9 +71,9 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
 //                        "http\\\\://c.y.qq.com/rsc/fcgi-bin/fcg_pyq_play.fcg?songmid=0024gHOb4GYnBO&songtype=0&fromtag=7&code=8d08d"
 //                );
 
-                UrlMessage urlMessage = new UrlMessage();
-                urlMessage.setUrl("www.baidu.com").setTitle("百度");
-                messageChannel.builder(channel, botId, 166748580L, 575604615L).addUrlMessage(urlMessage).send();
+//                UrlMessage urlMessage = new UrlMessage();
+//                urlMessage.setUrl("www.baidu.com").setTitle("百度").setContent("shabi").setCoverUrl("https://img.alicdn.com/imgextra/i3/6000000001009/O1CN01jeTuGI1JKAMK4WGFm_!!6000000001009-0-octopus.jpg");
+//                messageChannel.builder(channel, botId, 166748580L, 575604615L).addUrlMessage(urlMessage).send();
             } catch (Exception e) {
                 e.printStackTrace();
             }
