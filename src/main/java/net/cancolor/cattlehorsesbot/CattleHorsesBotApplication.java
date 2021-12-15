@@ -53,11 +53,11 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
 //                messageChannel.builder(channel, botId, 575604615L).nudge();
                 //禁言
 
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).mute(2);
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).mute(2);
 
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).unmute();
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).unmute();
 
-                messageChannel.builder(channel, botId, 166748580L, 3021611449L).kick("给爷爪巴", false);
+//                messageChannel.builder(channel, botId, 166748580L, 3021611449L).kick("给爷爪巴", false);
 
 
             } catch (Exception e) {
