@@ -1,6 +1,9 @@
 package net.cancolor.cattlehorsesbot;
 
 import io.netty.channel.Channel;
+import net.cancolor.easymiraiapi.channel.WebSocketMessageChannel;
+import net.cancolor.easymiraiapi.constant.ChannelConstant;
+import net.cancolor.easymiraiapi.factory.MessageChannelFactory;
 import net.cancolor.easymiraiapi.init.ImClientInit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +42,7 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
             imClientInit.connection();
             this.channel = imClientInit.getchannel();
             try {
-//                WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
+                WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
                 //私聊
 //                messageChannel.builder(channel, botId, 166748580L,575604615L).addAt().addPlainText("1")
 //                        .addFace(1).addFace(2).send();
