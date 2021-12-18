@@ -18,8 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <easy-mirai-api.version>1.0</easy-mirai-api.version>
-        <easy-mirai-api.version>1.0</easy-mirai-api.version>
+        <easy-bot-api.version>1.0</easy-bot-api.version>
     </properties>
     <dependencies>
         <dependency>
@@ -35,8 +34,14 @@
 
         <dependency>
             <groupId>net.cancolor</groupId>
-            <artifactId>easy-mirai-api</artifactId>
-            <version>${easy-mirai-api.version}</version>
+            <artifactId>easy-bot-api</artifactId>
+            <version>${easy-bot-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.cancolor</groupId>
+            <artifactId>easy-bot-api</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
