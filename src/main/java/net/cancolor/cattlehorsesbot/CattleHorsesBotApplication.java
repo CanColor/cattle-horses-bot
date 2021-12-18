@@ -1,10 +1,10 @@
 package net.cancolor.cattlehorsesbot;
 
 import io.netty.channel.Channel;
-import net.cancolor.easymiraiapi.channel.WebSocketMessageChannel;
-import net.cancolor.easymiraiapi.constant.ChannelConstant;
-import net.cancolor.easymiraiapi.factory.MessageChannelFactory;
-import net.cancolor.easymiraiapi.init.ImClientInit;
+import net.cancolor.easybotapi.channel.WebSocketMessageChannel;
+import net.cancolor.easybotapi.constant.ChannelConstant;
+import net.cancolor.easybotapi.factory.MessageChannelFactory;
+import net.cancolor.easybotapi.init.ImClientInit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
