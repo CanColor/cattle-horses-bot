@@ -19,6 +19,7 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
     @Resource
     ImClientInit imClientInit;
 
+
     static Long botId = 2052737713L;
 
     public static void main(String[] args) {
@@ -36,11 +37,11 @@ public class CattleHorsesBotApplication implements CommandLineRunner {
     public class clientThread implements Runnable {
         private final Logger logger = LoggerFactory.getLogger(this.toString());
         private Channel channel;
-
         @Override
         public void run() {
             imClientInit.connection();
-            this.channel = imClientInit.getchannel();
+            channel = imClientInit.getchannel();
+            ChannelFactory.setChannel(channel);
             try {
                 WebSocketMessageChannel messageChannel = (WebSocketMessageChannel) MessageChannelFactory.getMessageChannel(ChannelConstant.WEB_SOCKET);
                 //私聊
